@@ -1,6 +1,6 @@
 # homebridge-http-contact-sensor
 
-This is a plugin for [homebridge](https://github.com/nfarina/homebridge) which can monitor Contact / Door sensor via a HTTP endpoint that returns `0` or `1` depending on the sensor state.
+This is a plugin for [homebridge](https://github.com/nfarina/homebridge) which can monitor Contact / Door sensor via a HTTP endpoint that returns `0` or `1` or true or false, or "true" or "false" depending on the sensor state.
 
 ## Install
 
