@@ -1,5 +1,5 @@
 {
-  "name": "homebridge-http-contact-sensor",
+  "name": "homebridge-http-contact-sensor-boolean",
   "version": "1.0.3",
   "description": "Door/Contact sensor plugin for Homebridge",
   "keywords": [
@@ -8,7 +8,7 @@
     "contact sensor"
   ],
   "license": "MIT",
-  "author": "Carlos Yakimov <cyakimov@gmail.com>",
+  "author": "Oliver Levy <oliver.levy.ol@gmail.com>",
   "dependencies": {},
   "engines": {
     "node": ">=8.0.0",
@@ -16,6 +16,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cyakimov/homebridge-http-contact-sensor.git"
+    "url": "https://github.com/OliverLevy/homebridge-http-contact-sensor-boolean.git"
   }
 }
