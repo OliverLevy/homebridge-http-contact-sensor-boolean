@@ -51,19 +51,17 @@ ContactSensorAccessory.prototype = {
                                         data += chunk;
                                 });
                                 resp.on('end', () => {
-                                        try {
-                                                const parsedData = data.trim().toLowerCase(); // Trim whitespace and make case insensitive
-                                                if (parsedData === 'true') {
-                                                        callback(Characteristic.ContactSensorState.CONTACT_DETECTED); // Closed
-                                                } else if (parsedData === 'false') {
-                                                        callback(Characteristic.ContactSensorState.CONTACT_NOT_DETECTED); // Open
-                                                } else {
-                                                        callback(null); // Invalid response
-                                                }
-                                        } catch (error) {
-                                                console.error("Error parsing response:", error.message);
-                                                callback();
+                                        if (data === 'false') {
+                                                callback(parseInt(0));
+                                                return;
                                         }
+
+                                        if (data === 'true') {
+                                                callback(parseInt(1));
+                                                return;
+                                        }
+
+                                        callback(parseInt(data));
                                 });
                         }).on("error", (err) => {
                                 console.error("Error: " + err.message);
